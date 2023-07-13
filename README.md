@@ -49,4 +49,6 @@ Available benchmarking systems:
  * `uncertainty_ensemble` Uncertainty estimation using an ensemble using the QM9 gap dataset
  * `uncertainty_evidential` Uncertainty estimation using evidential learning using the QM9 gap dataset
  * `uncertainty_mve` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
- * `timing` Timing benchmark using subsets of QM9 gap.
+ * `timing` Timing benchmark using subsets of QM9 gap
+
+All benchmarks were done using the [v1.5.2](https://github.com/chemprop/chemprop/releases/tag/v1.5.2) release of Chemprop.
