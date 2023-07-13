@@ -2,7 +2,6 @@
 
 This repository contains benchmarking scripts and data for Chemprop, a message passing neural network for molecular property prediction, as described in the paper [XXX](XXX). Please have a look at the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
 
-
 ## Data
 
 All datasets used in the study can be downloaded from [Zenodo](XXX). You can either download and extract the file data.tar.gz yourself, or run
@@ -47,4 +46,7 @@ Available benchmarking systems:
  * `multi_molecule` UV/Vis peak absorption wavelengths in different solvents
  * `ir` IR Spectra
  * `pcqm4mv2` HOMO-LUMO gaps of the PCQM4Mv2 dataset
- 
+ * `uncertainty_ensemble` Uncertainty estimation using an ensemble using the QM9 gap dataset
+ * `uncertainty_evidential Uncertainty estimation using evidential learning using the QM9 gap dataset
+ * `uncertainty_ensemble` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
+ * `timing` Timing benchmark using subsets of QM9 gap.
