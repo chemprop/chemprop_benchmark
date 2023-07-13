@@ -47,6 +47,6 @@ Available benchmarking systems:
  * `ir` IR Spectra
  * `pcqm4mv2` HOMO-LUMO gaps of the PCQM4Mv2 dataset
  * `uncertainty_ensemble` Uncertainty estimation using an ensemble using the QM9 gap dataset
- * `uncertainty_evidential Uncertainty estimation using evidential learning using the QM9 gap dataset
+ * `uncertainty_evidential` Uncertainty estimation using evidential learning using the QM9 gap dataset
  * `uncertainty_ensemble` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
  * `timing` Timing benchmark using subsets of QM9 gap.
