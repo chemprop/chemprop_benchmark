@@ -25,8 +25,7 @@ cd scripts
 This will run a hyperparameter search, as well as a training run on the best hyperparameters, and produce the folder `results_barriers_e2` with all information. Specifically, the file `results_barriers_e2/test_scores.csv` will list the test set errors. If you have installed Chemprop via pip, use `chemprop_train` etc instead of `python $chemprop_dir/train.py` in the script.
 
 Available benchmarking systems:
- * `hiv_random` HIV replication inhibition from MoleculeNet and OGB with random splits
- * `hiv_scaffold` HIV replication inhibition from MoleculeNet and OGB with scaffold splits
+ * `hiv` HIV replication inhibition from MoleculeNet and OGB with scaffold splits
  * `pcba_random` Biological activities from MoleculeNet and OGB with random splits
  * `pcba_scaffold` Biological activities from MoleculeNet and OGB with scaffold splits
  * `qm9_multitask` DFT calculated properties from MoleculeNet and OGB, trained as a multi-task model
