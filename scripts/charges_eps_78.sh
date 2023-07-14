@@ -10,6 +10,9 @@ train_constraints_path=../data/charges_eps_78/train_constraints.csv
 val_constraints_path=../data/charges_eps_78/val_constraints.csv
 test_constraints_path=../data/charges_eps_78/test_constraints.csv
 
+external_test_path=../data/charges_eps_78/external_test_set.csv
+external_test_constraints_path=../data/charges_eps_78/external_test_set_constraints.csv
+
 #Hyperparameter optimization
 python $chemprop_dir/hyperparameter_optimization.py \
 --dataset_type regression \
@@ -52,4 +55,9 @@ python $chemprop_dir/train.py \
 --save_preds \
 --extra_metrics mae
 
-
+#Predict on external test set
+python $chemprop_dir/predict.py \
+--test_path $external_test_path \
+--constraints_path $external_test_constraints_path \
+--preds_path $results_dir/preds_external_test.csv \
+--checkpoint_dir $results_dir

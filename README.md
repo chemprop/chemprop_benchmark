@@ -37,7 +37,7 @@ Available benchmarking systems:
  * `bde` Bond dissociation enthalpies trained as single-task model
  * `bde_charges` Bond dissociation enthalpies trained as multi-task model together with atomic partial charges
  * `charges_eps_4` Partial charges at a dielectric constant of 4 (in protein)
- * `charges_eps_78` Partial charges at a dielectric constant of 78 (in protein)
+ * `charges_eps_78` Partial charges at a dielectric constant of 78 (in water)
  * `barriers_e2` Reaction barrier heights of E2 reactions
  * `barriers_sn2` Reaction barrier heights of SN2 reactions
  * `barriers_cycloadd` Reaction barrier heights of cycloaddition reactions
