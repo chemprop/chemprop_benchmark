@@ -50,4 +50,4 @@ Available benchmarking systems:
  * `uncertainty_mve` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
  * `timing` Timing benchmark using subsets of QM9 gap
 
-All benchmarks were done on the master branch of Chemprop as of March 2023, commit [0c129c9](https://github.com/chemprop/chemprop/commit/0c129b985868a98331edc728e75d59024778ee4c) which extends functionalities of the [v1.5.2](https://github.com/chemprop/chemprop/releases/tag/v1.5.2) release of Chemprop, and will be part of the upcoming v1.6 release.
+Most benchmarks were done on the master branch of Chemprop as of March 2023, commit [0c129c9](https://github.com/chemprop/chemprop/commit/0c129b985868a98331edc728e75d59024778ee4c) which extends functionalities of the [v1.5.2](https://github.com/chemprop/chemprop/releases/tag/v1.5.2) release of Chemprop, and will be part of the upcoming v1.6 release. The only exception is the `timing` benchmarks, which were run on the [`benchmark_timing`](https://github.com/chemprop/chemprop/tree/benchmark_timing) branch that includes timing printouts.
