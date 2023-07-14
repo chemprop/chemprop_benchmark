@@ -10,10 +10,8 @@ train_constraints_path=../data/charges_eps_4/train_constraints.csv
 val_constraints_path=../data/charges_eps_4/val_constraints.csv
 test_constraints_path=../data/charges_eps_4/test_constraints.csv
 
-external_test_path1=../data/charges_eps_4/test_set_1.csv
-external_test_constraints_path1=../data/charges_eps_4/test_set_1_constraints.csv
-external_test_path2=../data/charges_eps_4/test_set_2.csv
-external_test_constraints_path2=../data/charges_eps_4/test_set_2_constraints.csv
+external_test_path=../data/charges_eps_4/external_test_set.csv
+external_test_constraints_path=../data/charges_eps_4/external_test_set_constraints.csv
 
 #Hyperparameter optimization
 python $chemprop_dir/hyperparameter_optimization.py \
@@ -57,16 +55,9 @@ python $chemprop_dir/train.py \
 --save_preds \
 --extra_metrics mae
 
-#Predict on external test set 1
+#Predict on external test set
 python $chemprop_dir/predict.py \
---test_path $external_test_path1 \
---constraints_path $external_test_constraints_path1 \
---preds_path $results_dir/preds_test1.csv \
---checkpoint_dir $results_dir
-
-#Predict on external test set 2
-python $chemprop_dir/predict.py \
---test_path $external_test_path2 \
---constraints_path $external_test_constraints_path2 \
---preds_path $results_dir/preds_test2.csv \
+--test_path $external_test_path \
+--constraints_path $external_test_constraints_path \
+--preds_path $results_dir/preds_external_test.csv \
 --checkpoint_dir $results_dir
