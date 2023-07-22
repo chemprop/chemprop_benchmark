@@ -1,13 +1,13 @@
 # Chemprop benchmarking scripts and data
 
-This repository contains benchmarking scripts and data for Chemprop, a message passing neural network for molecular property prediction, as described in the paper [XXX](XXX). Please have a look at the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
+This repository contains benchmarking scripts and data for Chemprop, a message passing neural network for molecular property prediction, as described in the paper [Chemprop: Machine Learning Package for Chemical Property Prediction]() (ChemRxiv link will be available soon). Please have a look at the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
 
 ## Data
 
-All datasets used in the study can be downloaded from [Zenodo](XXX). You can either download and extract the file data.tar.gz yourself, or run
+All datasets used in the study can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8174268). You can either download and extract the file data.tar.gz yourself, or run
 
 ```
-wget https://zenodo.org/api/files/xxx.tar.gz
+wget https://zenodo.org/record/8174268/files/data.tar.gz
 tar -xzvf data.tar.gz
 ```
 
