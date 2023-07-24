@@ -1,6 +1,6 @@
 # Chemprop benchmarking scripts and data
 
-This repository contains benchmarking scripts and data for Chemprop, a message passing neural network for molecular property prediction, as described in the paper [Chemprop: Machine Learning Package for Chemical Property Prediction]() (ChemRxiv link will be available soon). Please have a look at the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
+This repository contains benchmarking scripts and data for Chemprop, a message passing neural network for molecular property prediction, as described in the paper [Chemprop: Machine Learning Package for Chemical Property Prediction](https://doi.org/10.26434/chemrxiv-2023-3zcfl). Please have a look at the [Chemprop repository](https://github.com/chemprop/chemprop) for installation and usage instructions.
 
 ## Data
 
