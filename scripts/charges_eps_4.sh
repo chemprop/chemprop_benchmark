@@ -29,7 +29,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --config_save_path $results_dir/config.json \
 --hyperopt_checkpoint_dir $results_dir \
 --log_dir $results_dir \
---keeping_atom_map \
+--adding_h \
 --is_atom_bond_targets \
 --no_shared_atom_bond_ffn \
 --no_adding_bond_types
@@ -47,7 +47,7 @@ python $chemprop_dir/train.py \
 --aggregation norm \
 --config_path $results_dir/config.json \
 --save_dir $results_dir \
---keeping_atom_map \
+--adding_h \
 --is_atom_bond_targets \
 --no_shared_atom_bond_ffn \
 --no_adding_bond_types \

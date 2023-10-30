@@ -10,7 +10,7 @@ test_path=../data/logP/test.csv
 path=../data/logP/logP_without_overlap.csv
 
 #Hyperparameter optimization
-#python $chemprop_dir/hyperparameter_optimization.py \
+python $chemprop_dir/hyperparameter_optimization.py \
 --dataset_type regression \
 --data_path $train_path \
 --separate_val_path $val_path \
