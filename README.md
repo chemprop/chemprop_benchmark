@@ -4,10 +4,10 @@ This repository contains benchmarking scripts and data for Chemprop, a message p
 
 ## Data
 
-All datasets used in the study can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8174268). You can either download and extract the file data.tar.gz yourself, or run
+All datasets used in the study can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8174267). You can either download and extract the file data.tar.gz yourself, or run
 
 ```
-wget https://zenodo.org/record/8174268/files/data.tar.gz
+wget https://zenodo.org/record/8174267/files/data.tar.gz
 tar -xzvf data.tar.gz
 ```
 
@@ -26,7 +26,8 @@ This will run a hyperparameter search, as well as a training run on the best hyp
 
 Available benchmarking systems:
  * `hiv` HIV replication inhibition from MoleculeNet and OGB with scaffold splits
- * `pcba_random` Biological activities from MoleculeNet and OGB with random splits
+ * `pcba_random` Biological activities from MoleculeNet with random splits
+ * `pcba_random_nans` Biological activities from MoleculeNet with missing targets NOT set to zero (to be comparable to the OGB version) with random splits
  * `pcba_scaffold` Biological activities from MoleculeNet and OGB with scaffold splits
  * `qm9_multitask` DFT calculated properties from MoleculeNet and OGB, trained as a multi-task model
  * `qm9_u0` DFT calculated properties from MoleculeNet and OGB, trained as a single-task model on the target U0 only
@@ -50,4 +51,4 @@ Available benchmarking systems:
  * `uncertainty_mve` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
  * `timing` Timing benchmark using subsets of QM9 gap
 
-Most benchmarks were done on the master branch of Chemprop as of March 2023, commit [0c129c9](https://github.com/chemprop/chemprop/commit/0c129b985868a98331edc728e75d59024778ee4c) which extends functionalities of the [v1.5.2](https://github.com/chemprop/chemprop/releases/tag/v1.5.2) release of Chemprop, and will be part of the upcoming v1.6 release. The only exception is the `timing` benchmarks, which were run on the [`benchmark_timing`](https://github.com/chemprop/chemprop/tree/benchmark_timing) branch that includes timing printouts.
+The benchmarks were done on the master branch of [Chemprop v1.6.1](https://github.com/chemprop/chemprop/tree/v1.6.1). The only exception is the `timing` benchmarks, which were run on the [`benchmark_timing`](https://github.com/chemprop/chemprop/tree/benchmark_timing) branch that includes timing printouts. However, they can also be run on the master branch, although with less verbous printouts.
