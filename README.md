@@ -51,4 +51,4 @@ Available benchmarking systems:
  * `uncertainty_mve` Uncertainty estimation using mean-variance estimation using the QM9 gap dataset
  * `timing` Timing benchmark using subsets of QM9 gap
 
-The benchmarks were done on the master branch of [Chemprop v1.6.1](https://github.com/chemprop/chemprop/tree/v1.6.1). The only exception is the `timing` benchmarks, which were run on the [`benchmark_timing`](https://github.com/chemprop/chemprop/tree/benchmark_timing) branch that includes timing printouts. However, they can also be run on the master branch, although with less verbous printouts.
+The benchmarks were done on the master branch of [Chemprop v1.6.1](https://github.com/chemprop/chemprop/tree/v1.6.1). The only exception is the `timing` benchmarks, which were run on the [`benchmark_timing`](https://github.com/chemprop/chemprop/tree/benchmark_timing) branch that includes timing printouts. However, they can also be run on the master branch, although with less verbous printouts. If you want to recreate the exact environment this study was run in, you can use the `environment.yml` file to set up a conda environment.
