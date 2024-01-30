@@ -7,7 +7,7 @@ This repository contains benchmarking scripts and data for Chemprop, a message p
 All datasets used in the study can be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.8174267). You can either download and extract the file data.tar.gz yourself, or run
 
 ```
-wget https://zenodo.org/record/8174267/files/data.tar.gz
+wget https://zenodo.org/records/10078142/files/data.tar.gz
 tar -xzvf data.tar.gz
 ```
 
