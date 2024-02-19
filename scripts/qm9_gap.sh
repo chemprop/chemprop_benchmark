@@ -8,7 +8,7 @@ val_path=../data/qm9/val.csv
 test_path=../data/qm9/test.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -23,7 +23,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --target-columns gap
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \

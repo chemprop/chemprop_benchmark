@@ -10,7 +10,7 @@ test_path=../data/logP/test.csv
 path=../data/logP/logP_without_overlap.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -24,7 +24,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --log-dir $results_dir 
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -38,7 +38,7 @@ python $chemprop_dir/train.py \
 --extra-metrics mae
 
 #Train production model
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $path \
 --separate-val-path $path \
@@ -50,7 +50,7 @@ python $chemprop_dir/train.py \
 --ensemble-size 5 
 
 #Predict on Sample 6
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path "../data/logP/sampl6_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL6.csv \
 --checkpoint-dir $results_dir2 \
@@ -60,7 +60,7 @@ echo SAMPL6  >> $results_dir2/sampl.csv
 python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metrics.mean_squared_error(pd.read_csv("results_sampl_production/pred_SAMPL6.csv")["logP"],pd.read_csv("../data/logP/sampl6_experimental.csv")["logP mean"],squared=False))' >> $results_dir2/sampl.csv
 
 #Predict on Sample 7
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path "../data/logP/sampl7_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL7.csv \
 --checkpoint-dir $results_dir2 \
@@ -70,7 +70,7 @@ echo SAMPL7 >> $results_dir2/sampl.csv
 python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metrics.mean_squared_error(pd.read_csv("results_sampl_production/pred_SAMPL7.csv")["logP"],pd.read_csv("../data/logP/sampl7_experimental.csv")["logP mean"],squared=False))' >> $results_dir2/sampl.csv
 
 #Predict on Sample 9
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path "../data/logP/sampl9_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL9.csv \
 --checkpoint-dir $results_dir2 \

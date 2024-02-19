@@ -8,7 +8,7 @@ val_path=../data/ir/val.csv
 test_path=../data/ir/test.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type spectra \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -22,7 +22,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --log-dir $results_dir 
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type spectra \
 --data-path $train_path \
 --separate-val-path $val_path \

@@ -8,7 +8,7 @@ val_path=../data/barriers_cycloadd/val.csv
 test_path=../data/barriers_cycloadd/test.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -26,7 +26,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --target-columns G_act
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \

@@ -14,7 +14,7 @@ external_test_path=../data/charges_eps_78/external_test_set.csv
 external_test_constraints_path=../data/charges_eps_78/external_test_set_constraints.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -35,7 +35,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --no-adding-bond-types
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -56,7 +56,7 @@ python $chemprop_dir/train.py \
 --extra-metrics mae
 
 #Predict on external test set
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path $external_test_path \
 --constraints-path $external_test_constraints_path \
 --preds-path $results_dir/preds_external_test.csv \

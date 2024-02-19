@@ -6,7 +6,7 @@ save_dir=results_timing
 data_dir=../data/timing
 
 #100k
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $data_dir/qm9_100k.csv \
 --save-dir $save_dir/qm9_100k \
@@ -17,14 +17,14 @@ python $chemprop_dir/train.py \
 --ffn-hidden-size 1000 \
 --epochs 50 
 
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path $data_dir/qm9_100k.csv \
 --preds-path $save_dir/qm9_100k/preds/preds.csv \
 --checkpoint-dir $save_dir/qm9_100k 
 
 
 #10k
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $data_dir/qm9_10k.csv \
 --save-dir $save_dir/qm9_10k \
@@ -35,13 +35,13 @@ python $chemprop_dir/train.py \
 --ffn-hidden-size 1000 \
 --epochs 50
 
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path $data_dir/qm9_10k.csv \
 --preds-path $save_dir/qm9_10k/preds/preds.csv \
  --checkpoint-dir $save_dir/qm9_10k 
 
 #1k
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $data_dir/qm9_1k.csv \
 --save-dir $save_dir/qm9_1k \
@@ -52,7 +52,7 @@ python $chemprop_dir/train.py \
 --ffn-hidden-size 1000 \
 --epochs 50 
 
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path $data_dir/qm9_1k.csv \
 --preds-path $save_dir/qm9_1k/preds/preds.csv \
 --checkpoint-dir $save_dir/qm9_1k 

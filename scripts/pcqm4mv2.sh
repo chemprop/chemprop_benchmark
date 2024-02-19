@@ -8,7 +8,7 @@ val_path=../data/pcqm4mv2/val.csv
 test_path=../data/pcqm4mv2/test.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -22,7 +22,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --log-dir $results_dir 
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \

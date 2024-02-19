@@ -8,7 +8,7 @@ val_path=../data/uncertainty/val.csv
 test_path=../data/uncertainty/test.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -22,7 +22,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --log-dir $results_dir
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -34,7 +34,7 @@ python $chemprop_dir/train.py \
 --ensemble-size 5 
 
 #Predict, analyze uncertainty
-python $chemprop_dir/predict.py \
+chemprop predict \
 --test-path $test_path \
 --preds-path $results_dir/test_preds_unc_ensemble.csv \
 --checkpoint-dir $results_dir \

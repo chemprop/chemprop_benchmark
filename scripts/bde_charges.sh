@@ -11,7 +11,7 @@ val_constraints_path=../data/bde_charges/val_constraints.csv
 test_constraints_path=../data/bde_charges/test_constraints.csv
 
 #Hyperparameter optimization
-python $chemprop_dir/hyperparameter_optimization.py \
+chemprop hyperopt \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -32,7 +32,7 @@ python $chemprop_dir/hyperparameter_optimization.py \
 --no-adding-bond-types
 
 #Training with optimized hyperparameters
-python $chemprop_dir/train.py \
+chemprop train \
 --dataset-type regression \
 --data-path $train_path \
 --separate-val-path $val_path \
