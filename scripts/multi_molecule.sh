@@ -9,7 +9,7 @@ test_path=../data/multi_molecule/test.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -24,7 +24,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -35,5 +35,5 @@ chemprop train \
 --number-of-molecules 2 \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics mae r2
+--metrics mae r2
 

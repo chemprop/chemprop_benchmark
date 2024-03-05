@@ -12,7 +12,7 @@ test_constraints_path=../data/bde_charges/test_constraints.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -33,7 +33,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -50,5 +50,5 @@ chemprop train \
 --no-adding-bond-types \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics mae \
+--metrics mae \
 --show-individual-scores

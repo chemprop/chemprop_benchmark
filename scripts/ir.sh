@@ -9,7 +9,7 @@ test_path=../data/ir/test.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type spectra \
+-t spectra \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -23,7 +23,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type spectra \
+-t spectra \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \

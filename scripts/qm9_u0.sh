@@ -9,7 +9,7 @@ test_path=../data/qm9/test.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -20,11 +20,11 @@ chemprop hyperopt \
 --config-save-path $results_dir/config.json \
 --hyperopt-checkpoint-dir $results_dir \
 --log-dir $results_dir \
---target-columns u0_atom 
+-target-columns u0_atom 
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -34,6 +34,6 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics mae \
+--metrics mae \
 --show-individual-scores \
---target-columns u0_atom 
+-target-columns u0_atom 

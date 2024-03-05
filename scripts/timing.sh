@@ -7,7 +7,7 @@ data_dir=../data/timing
 
 #100k
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $data_dir/qm9_100k.csv \
 --save-dir $save_dir/qm9_100k \
 --aggregation norm \
@@ -18,14 +18,14 @@ chemprop train \
 --epochs 50 
 
 chemprop predict \
---test-path $data_dir/qm9_100k.csv \
+-test-path $data_dir/qm9_100k.csv \
 --preds-path $save_dir/qm9_100k/preds/preds.csv \
 --checkpoint-dir $save_dir/qm9_100k 
 
 
 #10k
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $data_dir/qm9_10k.csv \
 --save-dir $save_dir/qm9_10k \
 --aggregation norm \
@@ -36,13 +36,13 @@ chemprop train \
 --epochs 50
 
 chemprop predict \
---test-path $data_dir/qm9_10k.csv \
+-test-path $data_dir/qm9_10k.csv \
 --preds-path $save_dir/qm9_10k/preds/preds.csv \
  --checkpoint-dir $save_dir/qm9_10k 
 
 #1k
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $data_dir/qm9_1k.csv \
 --save-dir $save_dir/qm9_1k \
 --aggregation norm \
@@ -53,6 +53,6 @@ chemprop train \
 --epochs 50 
 
 chemprop predict \
---test-path $data_dir/qm9_1k.csv \
+-test-path $data_dir/qm9_1k.csv \
 --preds-path $save_dir/qm9_1k/preds/preds.csv \
 --checkpoint-dir $save_dir/qm9_1k 

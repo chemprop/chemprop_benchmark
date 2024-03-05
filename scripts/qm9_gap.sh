@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chemprop_dir=../../../chemprop  # location of chemprop directory, CHANGE ME
+# chemprop_dir=../../../chemprop  # location of chemprop directory, CHANGE ME
 
 results_dir=results_qm9_gap
 train_path=../data/qm9/train.csv
@@ -8,23 +8,23 @@ val_path=../data/qm9/val.csv
 test_path=../data/qm9/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
---dataset-type regression \
---data-path $train_path \
---separate-val-path $val_path \
---separate-test-path $val_path \
---num-iters 30 \
---epochs 50 \
---aggregation norm \
---search-parameter-keywords depth ffn_num_layers  hidden_size ffn_hidden_size dropout \
---config-save-path $results_dir/config.json \
---hyperopt-checkpoint-dir $results_dir \
---log-dir $results_dir \
---target-columns gap
+# chemprop hyperopt \
+# -t regression \
+# --data-path $train_path \
+# --separate-val-path $val_path \
+# --separate-test-path $val_path \
+# --num-iters 30 \
+# --epochs 50 \
+# --aggregation norm \
+# --search-parameter-keywords depth ffn_num_layers  hidden_size ffn_hidden_size dropout \
+# --config-save-path $results_dir/config.json \
+# --hyperopt-checkpoint-dir $results_dir \
+# --log-dir $results_dir \
+# -target-columns gap
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -34,6 +34,6 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics mae \
+--metrics mae \
 --show-individual-scores \
---target-columns gap
+-target-columns gap

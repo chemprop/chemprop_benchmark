@@ -8,22 +8,22 @@ val_path=../data/hiv/val.csv
 test_path=../data/hiv/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
---dataset-type classification \
---data-path $train_path \
---separate-val-path $val_path \
---separate-test-path $val_path \
---num-iters 30 \
---epochs 50 \
---aggregation norm \
---search-parameter-keywords depth ffn_num_layers  hidden_size ffn_hidden_size dropout \
---config-save-path $results_dir/config.json \
---hyperopt-checkpoint-dir $results_dir \
---log-dir $results_dir 
+# chemprop hyperopt \
+# -t classification \
+# --data-path $train_path \
+# --separate-val-path $val_path \
+# --separate-test-path $val_path \
+# --num-iters 30 \
+# --epochs 50 \
+# --aggregation norm \
+# --search-parameter-keywords depth ffn_num_layers  hidden_size ffn_hidden_size dropout \
+# --config-save-path $results_dir/config.json \
+# --hyperopt-checkpoint-dir $results_dir \
+# --log-dir $results_dir 
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type classification \
+-t classification \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -33,5 +33,5 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics prc-auc
+--metrics prc-auc
 

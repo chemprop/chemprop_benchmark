@@ -9,7 +9,7 @@ test_path=../data/pcba_random/test.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type classification \
+-t classification \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -23,7 +23,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type classification \
+-t classification \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -33,5 +33,5 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics prc-auc
+--metrics prc-auc
 

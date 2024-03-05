@@ -9,7 +9,7 @@ test_path=../data/uncertainty/test.csv
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -23,7 +23,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -35,7 +35,7 @@ chemprop train \
 
 #Predict, analyze uncertainty
 chemprop predict \
---test-path $test_path \
+-test-path $test_path \
 --preds-path $results_dir/test_preds_unc_ensemble.csv \
 --checkpoint-dir $results_dir \
 --uncertainty-method ensemble \

@@ -15,7 +15,7 @@ external_test_constraints_path=../data/charges_eps_4/external_test_set_constrain
 
 #Hyperparameter optimization
 chemprop hyperopt \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $val_path \
@@ -36,7 +36,7 @@ chemprop hyperopt \
 
 #Training with optimized hyperparameters
 chemprop train \
---dataset-type regression \
+-t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -53,11 +53,11 @@ chemprop train \
 --no-adding-bond-types \
 --ensemble-size 5 \
 --save-preds \
---extra-metrics mae
+--metrics mae
 
 #Predict on external test set
 chemprop predict \
---test-path $external_test_path \
+-test-path $external_test_path \
 --constraints-path $external_test_constraints_path \
 --preds-path $results_dir/preds_external_test.csv \
 --checkpoint-dir $results_dir
