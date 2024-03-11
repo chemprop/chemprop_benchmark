@@ -8,7 +8,7 @@ val_path=../data/ir/val.csv
 test_path=../data/ir/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t spectra \
 --data-path $train_path \
 --separate-val-path $val_path \

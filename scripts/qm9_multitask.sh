@@ -8,7 +8,7 @@ val_path=../data/qm9/val.csv
 test_path=../data/qm9/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t regression \
 --data-path $train_path \
 --separate-val-path $val_path \

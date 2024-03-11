@@ -8,7 +8,7 @@ val_path=../data/uncertainty/val.csv
 test_path=../data/uncertainty/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -35,7 +35,7 @@ chemprop train \
 
 #Predict, analyze uncertainty
 chemprop predict \
--test-path $test_path \
+--test-path $test_path \
 --preds-path $results_dir/test_preds_unc_ensemble.csv \
 --checkpoint-dir $results_dir \
 --uncertainty-method ensemble \

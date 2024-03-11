@@ -8,7 +8,7 @@ val_path=../data/barriers_cycloadd/val.csv
 test_path=../data/barriers_cycloadd/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -23,7 +23,7 @@ chemprop hyperopt \
 --reaction \
 --explicit-h \
 --smiles-column rxn_smiles \
--target-columns G_act
+--target-columns G_act
 
 #Training with optimized hyperparameters
 chemprop train \
@@ -41,5 +41,5 @@ chemprop train \
 --save-preds \
 --metrics mae \
 --smiles-column rxn_smiles \
--target-columns G_act
+--target-columns G_act
 

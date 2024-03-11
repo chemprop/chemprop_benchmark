@@ -10,7 +10,7 @@ test_path=../data/logP/test.csv
 path=../data/logP/logP_without_overlap.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t regression \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -51,7 +51,7 @@ chemprop train \
 
 #Predict on Sample 6
 chemprop predict \
--test-path "../data/logP/sampl6_experimental.csv" \
+--test-path "../data/logP/sampl6_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL6.csv \
 --checkpoint-dir $results_dir2 \
 --smiles-column "Isomeric SMILES"
@@ -61,7 +61,7 @@ python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metri
 
 #Predict on Sample 7
 chemprop predict \
--test-path "../data/logP/sampl7_experimental.csv" \
+--test-path "../data/logP/sampl7_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL7.csv \
 --checkpoint-dir $results_dir2 \
 --smiles-column "Isomeric SMILES"
@@ -71,7 +71,7 @@ python -c 'import pandas as pd; from sklearn import metrics; print("rmse", metri
 
 #Predict on Sample 9
 chemprop predict \
--test-path "../data/logP/sampl9_experimental.csv" \
+--test-path "../data/logP/sampl9_experimental.csv" \
 --preds-path $results_dir2/pred_SAMPL9.csv \
 --checkpoint-dir $results_dir2 \
 --smiles-column smiles

@@ -8,7 +8,7 @@ val_path=../data/pcba_scaffold/val.csv
 test_path=../data/pcba_scaffold/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t classification \
 --data-path $train_path \
 --separate-val-path $val_path \
@@ -33,5 +33,5 @@ chemprop train \
 --save-dir $results_dir \
 --ensemble-size 5 \
 --save-preds \
---metrics prc-auc
+--metrics prc
 

@@ -8,7 +8,7 @@ val_path=../data/barriers_rgd1/val.csv
 test_path=../data/barriers_rgd1/test.csv
 
 #Hyperparameter optimization
-chemprop hyperopt \
+# chemprop hyperopt \
 -t regression \
 --data-path $train_path \
 --separate-val-path $val_path \

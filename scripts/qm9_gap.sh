@@ -8,7 +8,7 @@ val_path=../data/qm9/val.csv
 test_path=../data/qm9/test.csv
 
 #Hyperparameter optimization
-# chemprop hyperopt \
+# # chemprop hyperopt \
 # -t regression \
 # --data-path $train_path \
 # --separate-val-path $val_path \
@@ -20,7 +20,7 @@ test_path=../data/qm9/test.csv
 # --config-save-path $results_dir/config.json \
 # --hyperopt-checkpoint-dir $results_dir \
 # --log-dir $results_dir \
-# -target-columns gap
+# --target-columns gap
 
 #Training with optimized hyperparameters
 chemprop train \
@@ -36,4 +36,4 @@ chemprop train \
 --save-preds \
 --metrics mae \
 --show-individual-scores \
--target-columns gap
+--target-columns gap
