@@ -23,7 +23,7 @@ test_path=../data/ir/test.csv
 
 #Training with optimized hyperparameters
 chemprop train \
--t spectra \
+-t spectral \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \

@@ -33,6 +33,7 @@ chemprop train \
 --aggregation norm \
 --config-path $results_dir/config.json \
 --save-dir $results_dir \
+--reaction-columns smiles \
 --keep-h \
 --ensemble-size 5 \
 --save-preds \

@@ -31,6 +31,7 @@ chemprop train \
 --separate-test-path $test_path \
 --epochs 50 \
 --aggregation norm \
+--reaction-columns smiles \
 --keep-h \
 --config-path $results_dir/config.json \
 --save-dir $results_dir \

@@ -25,6 +25,7 @@ test_path=../data/multi_molecule/test.csv
 #Training with optimized hyperparameters
 chemprop train \
 -t regression \
+-s smiles solvent \
 --data-path $train_path \
 --separate-val-path $val_path \
 --separate-test-path $test_path \
@@ -32,8 +33,8 @@ chemprop train \
 --aggregation norm \
 --config-path $results_dir/config.json \
 --save-dir $results_dir \
---number-of-molecules 2 \
 --ensemble-size 5 \
 --save-preds \
 --metrics mae r2
+# --number-of-molecules 2 \
 

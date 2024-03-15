@@ -31,11 +31,13 @@ chemprop train \
 --separate-test-path $test_path \
 --epochs 200 \
 --aggregation norm \
+--reaction-columns AAM \
+--keep-h \
 --config-path $results_dir/config.json \
 --save-dir $results_dir \
---reaction \
---explicit-h \
 --ensemble-size 5 \
 --save-preds \
 --metrics mae
+# --reaction \
+# --explicit-h \
 

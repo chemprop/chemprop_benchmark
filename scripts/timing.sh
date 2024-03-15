@@ -20,7 +20,7 @@ chemprop train \
 chemprop predict \
 --test-path $data_dir/qm9_100k.csv \
 --preds-path $save_dir/qm9_100k/preds/preds.csv \
---checkpoint-dir $save_dir/qm9_100k 
+--model-path $save_dir/qm9_100k 
 
 
 #10k
@@ -38,7 +38,7 @@ chemprop train \
 chemprop predict \
 --test-path $data_dir/qm9_10k.csv \
 --preds-path $save_dir/qm9_10k/preds/preds.csv \
- --checkpoint-dir $save_dir/qm9_10k 
+--model-path $save_dir/qm9_10k 
 
 #1k
 chemprop train \
@@ -55,4 +55,4 @@ chemprop train \
 chemprop predict \
 --test-path $data_dir/qm9_1k.csv \
 --preds-path $save_dir/qm9_1k/preds/preds.csv \
---checkpoint-dir $save_dir/qm9_1k 
+--model-path $save_dir/qm9_1k 
